@@ -7,6 +7,19 @@ if (startNumb === null) {
 } else {
   alert(`You start with ${startNumb} number`);
 
+  // for (;;) {
+  //   let stopIterationMsg = prompt(`Enter 'break' or press 'Esc' to stop iterations. Enter 'continue' to continue iterations`);
+  //
+  //   if (stopIterationMsg === null || stopIterationMsg.toLowerCase() === 'break') {
+  //     break;
+  //   } else if (stopIterationMsg.toLowerCase() === 'continue') {
+  //     startNumb++;
+  //     alert(`Now your number is ${startNumb}`);
+  //   } else {
+  //     alert(`You must enter 'break' or 'continue'`);
+  //   }
+  // }
+
   for (;;) {
     let stopIterationMsg = prompt(`Enter 'break' or press 'Esc' to stop iterations. Enter 'continue' to continue iterations`);
 
@@ -14,9 +27,9 @@ if (startNumb === null) {
       break;
     } else if (stopIterationMsg.toLowerCase() === 'continue') {
       startNumb++;
-      alert(`Now your number is ${startNumb}`);
     } else {
-      alert(`You must enter 'break' or 'continue'`);
+      startNumb++;
+      alert(startNumb);
     }
   }
 }
