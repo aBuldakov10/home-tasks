@@ -7,7 +7,22 @@ if (+firstNumber) {
     const secondNumber = prompt('Enter the second number');
 
     if (+secondNumber) {
-      let result = eval(firstNumber + operand + secondNumber);
+      let result;
+
+      switch (operand) {
+        case "*":
+          result = +firstNumber * +secondNumber;
+          break;
+        case "+":
+          result = +firstNumber + +secondNumber;
+          break;
+        case "-":
+          result = +firstNumber - +secondNumber;
+          break;
+        case "/":
+          result = +firstNumber / +secondNumber;
+          break;
+      }
 
       alert(`Ваш результат ${result}`);
     } else if (secondNumber === null) {
